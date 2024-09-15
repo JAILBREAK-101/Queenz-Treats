@@ -7,11 +7,21 @@ export const API_ROUTES = {
     register: `${API_BASE_URL}/account/signup/`,
     resetPassword: `${API_BASE_URL}/account/reset-password/`,
   },
+  website: {
+    // For all products
+    products: `${API_BASE_URL}/products`,
+    // For a single product based on its category
+    oneProduct: (category: string, id: string) => `${API_BASE_URL}/products/${category}/{${id}`,
+    // For all events
+    events: `${API_BASE_URL}/events`,
+    // For a single event based on its type
+    oneEvents: (type: string, id: string) => `${API_BASE_URL}/products/${type}/{${id}`,
+    // Gallery APIs
+    pictures: `${API_BASE_URL}/pictures`,
+    videos: `${API_BASE_URL}/videos`,
+  },
   users: {
     profile: `${API_BASE_URL}/profile`,
-    setting: `${API_BASE_URL}/setting`,
-    payments: `${API_BASE_URL}/payments`,
-    // add more based on the API endpoints defined
-    one: (id: string) => `${API_BASE_URL}/users/${id}`,
+    purchases: `${API_BASE_URL}/purchases`,
   },
 };
