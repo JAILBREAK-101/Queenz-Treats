@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "./icon";
+import { Icon } from "../ui/icon";
 import { FaSpinner } from "react-icons/fa";
 
 export const Button = ({ 
