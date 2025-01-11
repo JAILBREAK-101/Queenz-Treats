@@ -67,3 +67,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}

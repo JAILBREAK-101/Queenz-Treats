@@ -2,7 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import Navbar from "@/components/ui/nav"
+import { Card } from "@/components/ui/card"
 import { useState } from "react"
+import HeroImage from "@/assets/images/Early-Beginnings.avif"; 
+import Image from "next/image";
 
 export default function Page() {
 
@@ -49,8 +52,8 @@ const [isLoading, btnIsLoading ] = useState(false)
               <div className="p-2">
                   
                   {/* Hero Section */}
-                  <div className="hero-section" id="hero">
-                      <section className="grid-container grid-container-col-2">
+                  <div className="">
+                      <section className="flex max-md:flex-col gap-6">
   
                           <div className="hero-specific">
                               <h2 className="hero-section_header-text font-bold">Queenz Treats n Events</h2>
@@ -62,15 +65,43 @@ const [isLoading, btnIsLoading ] = useState(false)
 
                           <>
                               {/* <ImageGallery /> */}
+                              <Image src={HeroImage} alt="Hero Image" />
                           </>
                           
+                      </section>
+                  </div>
+
+                  {/* Services Section */}
+                  <div className="services-section" id="services">
+
+                      <section className="services-section_info">
+
+                          <h2 className="text-2xl">Our Services</h2>
+  
+                          <p className="services-section_info-text">At Queenz Treats n Events, we don't just sell products alone, but we render services such as</p>
+  
+                          <div className="grid grid-cols-2">
+                                                        {
+                                  services.map((service) => {
+                                      return (
+                                        <Card 
+                                            title={service.title}
+                                            description={service.text}
+                                            btnText={service.btnText}
+                                            link={service.url}
+                                            image={service.img}
+                                        />
+                                      )
+                                  })
+                              }
+                          </div>
                       </section>
                   </div>
 
                   {/* Events and Blog Section */}
                   <div className="events-section" id="events">
                       <section className="events-section_info">
-                          <h2 className="fs-32">Our Past Events</h2>
+                          <h2 className="fs-32">Past Events</h2>
   
                           <>
                               {/* <EventsComponent /> */}
@@ -112,32 +143,7 @@ const [isLoading, btnIsLoading ] = useState(false)
                       </section>
                   </div>
 
-                  {/* Services Section */}
-                  <div className="services-section" id="services">
-
-                      <section className="services-section_info">
-
-                          <h2 className="fs-32">Our Services</h2>
-  
-                          <p className="services-section_info-text">At Queenz Treats n Events, we don't just sell products alone, but we render services such as</p>
-  
-                          <div className="grid grid-cols-2">
-                              {
-                                  services.map((service) => {
-                                      return (
-                                          <div className="card primary-light-bg-color" key={service.title}>
-                                              <h3 className="card_header">{service.title}</h3>
-                                              
-                                              <p className="card_body">{service.text}</p>
-                                              
-                                              {/* <RouteButton btnLink={service.url} btnAction={null} btnClass="card-cta button flex-align-self-start" body={service.btnText} loading={isLoading} spanClass={""}/> */}
-                                          </div>
-                                      )
-                                  })
-                              }
-                          </div>
-                      </section>
-                  </div>
+                  
               </div>
               
               {/* <Footer /> */}
