@@ -11,7 +11,7 @@
         <header >
             <nav class="flex justify-between p-8">
                 <a href="../index.html">
-                    <img class="h-14" src="../public/assets/qte-logo.jpg" alt="Logo">
+                    <img class="h-14" src="./assets/qte-logo.jpg" alt="Logo">
                 </a>
 
                 <ul class="flex gap-7 items-center">
@@ -21,42 +21,77 @@
                     <li><a class="hover:font-bold" href="./events.html">Recent Events</a></li>
                 </ul>
 
-                <a class="bg-pink-600 text-white px-4 rounded-3xl hover:bg-white hover:text-pink-600 flex font-bold" href="./pages/plan.html"><button>Start Planning</button></a>
+                <a class="bg-pink-600 text-white px-4 rounded-3xl hover:bg-white hover:text-pink-600 flex font-bold" href="./plan.html"><button>Start Planning</button></a>
             </nav>
 
             <section>
-                <div class="flex flex-col items-start gap-4 px-8 py-3">
-                    <h1 class="text-3xl max-w-[40ch]">
-                        Unforgettable Culinary Experiences with Queenz Treats Services.
+                <div class="flex flex-col items-center gap-4 px-8 py-3">
+                    <h1 class="text-3xl max-w-[40ch] text-pink-600">
+                        Start Planning your events with us
                     </h1>
-
-                    <p class="max-w-[50ch]">Elevate your events with our exquisite, tailored catering solutions, designed to impress and delight every guest.</p>
-
-                    <a class="bg-pink-600 text-white px-4 rounded-3xl hover:bg-white hover:text-pink-600 p-4 font-bold" href="./pages/plan.html"><button>Start Planning</button></a>
                 </div>
-
-                <div class="flex gap-2 flex-wrap justify-center">
-                    <img class="w-96 h-96 object-cover" src="../public/assets/pablo-lancaster-jones-j9blCRSZ_Q4-unsplash.png" alt="Image 1">
-                    <img class="w-96 h-96 object-cover" src="../public/assets/pablo-lancaster-jones-j9blCRSZ_Q4-unsplash.png" alt="Image 2">
-                    <img class="w-96 h-96 object-cover" src="../public/assets/pablo-lancaster-jones-j9blCRSZ_Q4-unsplash.png" alt="Image 3">
-                </div>
-            </section>
         </header>
-       
 
-        <main class="pt-20"></main>
-
+        <main class="py-10 flex flex-col items-center">
+            <div class="bg-white px-20 py-10 rounded-lg shadow-lg max-w-2xl w-full">
+            <form action="#" method="POST" class="space-y-4">
+                <div class="flex flex-col">
+                    <label for="name" class="text-gray-700">Full Name *</label>
+                    <input type="text" id="name" name="name" required class="mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent">
+                </div>
+    
+                <div class="flex flex-col">
+                    <label for="email" class="text-gray-700">Email Address *</label>
+                    <input type="email" id="email" name="email" required class="mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent">
+                </div>
+    
+                <div class="flex flex-col">
+                    <label for="phone" class="text-gray-700">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required class="mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent">
+                </div>
+    
+                <div class="flex flex-col">
+                    <label for="event-type" class="text-gray-700">Event Type *</label>
+                    <select id="event-type" name="event-type" required class="mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent">
+                        <option value="wedding">Wedding</option>
+                        <option value="corporate">Corporate Event</option>
+                        <option value="birthday">Birthday Party</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+    
+                <div class="flex flex-col">
+                    <label for="date" class="text-gray-700">Event Date *</label>
+                    <input type="date" id="date" name="date" required class="mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent">
+                </div>
+    
+                <div class="flex flex-col">
+                    <label for="guests" class="text-gray-700">Number of Guests *</label>
+                    <input type="number" id="guests" name="guests" required min="1" class="mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent">
+                </div>
+    
+                <div class="flex flex-col">
+                    <label for="details" class="text-gray-700">Additional Details *</label>
+                    <textarea id="details" name="details" rows="4" class="mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent" placeholder="Share more about your event..."></textarea>
+                </div>
+    
+                <div class="flex justify-center">
+                    <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-white hover:text-pink-600 hover:border-pink-600 hover:border-2 transition duration-300 font-bold">Submit</button>
+                </div>
+            </form>
+        </div>
+        </main>
 
         <footer class="bg-black p-8 flex text-white">
             <div class="flex flex-col gap-9 justify-between">
                 <a href="/">
-                    <img class="h-14" src="../public/assets/qte-logo.jpg" alt="Logo">
+                    <img class="h-14" src="./assets/qte-logo.jpg" alt="Logo">
                 </a>
 
                 <div class="flex gap-4 items-center">
-                    <a href=""><img class="object-cover h-6 w-6" src="../public/assets/Instagram.svg" alt="Queenz-Treats on Instagram" class="h-14"></a>
-                    <a href=""><img class="object-cover h-6 w-6" src="../public/assets/TwitterX.svg" alt="Queenz-Treats on TwitterX" class="h-14"></a>
-                    <a href=""><img class="object-cover h-6 w-6" src="../public/assets/Pinterest.svg" alt="Queenz-Treats on Facebook" class="h-14"></a>
+                    <a href=""><img class="object-cover h-6 w-6" src="./assets/Instagram.svg" alt="Queenz-Treats on Instagram" class="h-14"></a>
+                    <a href=""><img class="object-cover h-6 w-6" src="./assets/TwitterX.svg" alt="Queenz-Treats on TwitterX" class="h-14"></a>
+                    <a href=""><img class="object-cover h-6 w-6" src="./assets/Pinterest.svg" alt="Queenz-Treats on Facebook" class="h-14"></a>
                 </div>
 
                 <ul class="flex gap-7 items-center">
